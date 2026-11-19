@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "skills": {
+    "excel-dna-addins": {
+      "source": "Excel-DNA/Skills",
+      "commit": "1993544f1d875e88380867abbc643c6be6015257",
+      "sourceType": "github",
+      "skillPath": "skills/excel-dna-addins/SKILL.md",
+      "computedHash": "f4a433cdd6d94ceca1cc50205d2f74f2c427a30fe00813b43df3feb63a74ee3a"
+    }
+  }
+}

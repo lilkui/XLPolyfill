@@ -1,0 +1,22 @@
+diff --git a/Source/ExcelDna.Loader/XlMarshalContext.cs b/Source/ExcelDna.Loader/XlMarshalContext.cs
+index 551717f..0423448 100644
+--- a/Source/ExcelDna.Loader/XlMarshalContext.cs
++++ b/Source/ExcelDna.Loader/XlMarshalContext.cs
+@@ -1253,7 +1253,7 @@ namespace ExcelDna.Loader
+             {
+                 // For big allocations, ensure that Excel allows us to free the memory
+                 if (rows * columns * 16 + cbNativeStrings + numReferences * 16 > 65535)
+-                    pOper->xlType |= XlType12.XlBitDLLFree;
++                    ((XlOper12*)_pNative)->xlType |= XlType12.XlBitDLLFree;
+ 
+                 // We are done
+                 return _pNative;
+@@ -1356,7 +1356,7 @@ namespace ExcelDna.Loader
+             {
+                 // For big allocations, ensure that Excel allows us to free the memory
+                 if (rows * columns * 16 > 65535)
+-                    pOper->xlType |= XlType12.XlBitDLLFree;
++                    ((XlOper12*)_pNative)->xlType |= XlType12.XlBitDLLFree;
+ 
+                 // We are done
+                 return _pNative;
